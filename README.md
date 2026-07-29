@@ -1,30 +1,85 @@
 # 🎥 AI Video Assistant
 
-An AI-powered meeting intelligence assistant that transcribes meetings from YouTube videos or uploaded audio/video files, generates concise summaries, extracts actionable insights, and enables conversational Q&A using Retrieval-Augmented Generation (RAG).
+<p align="center">
+An AI-powered Meeting Intelligence Assistant that transcribes YouTube videos and uploaded audio/video files, generates AI-powered meeting summaries, extracts action items & key decisions, and lets you chat with your meetings using Retrieval-Augmented Generation (RAG).
+</p>
 
-Built using modern Generative AI technologies including Whisper, Sarvam AI, LangChain LCEL, Mistral AI, ChromaDB, HuggingFace Embeddings, and Streamlit.
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![LangChain](https://img.shields.io/badge/LangChain-LCEL-green)
+![Mistral AI](https://img.shields.io/badge/Mistral-AI-orange)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+</p>
 
 ---
 
-## 🚀 Features
+## 🚀 Overview
 
-- 🎥 Process YouTube videos directly
-- 📁 Upload audio or video meeting recordings
+AI Video Assistant transforms meeting recordings into structured insights.
+
+Simply provide a **YouTube URL** or upload an **audio/video file**, and the assistant automatically:
+
+- 🎙️ Transcribes meetings
+- 📝 Generates concise AI summaries
+- ✅ Extracts action items
+- 👥 Identifies owners
+- 📅 Detects deadlines
+- 💡 Captures key decisions
+- ❓ Lists open questions
+- 💬 Enables conversational Q&A using RAG
+- 📄 Exports reports as PDF or TXT
+
+---
+
+# ✨ Features
+
+- 🎥 Supports YouTube videos
+- 📁 Upload local audio/video files
 - 📝 English transcription using OpenAI Whisper (Local)
 - 🌏 Hindi & Hinglish transcription using Sarvam AI
 - 📋 AI-generated meeting summaries
-- ✅ Automatic Action Item extraction
-- 👤 Detects owners for each action item
-- 📅 Extracts deadlines (when mentioned)
-- 💡 Extracts Key Decisions
-- ❓ Finds Open Questions & Follow-ups
-- 💬 Chat with your meeting using RAG
+- ✅ Action Item Extraction
+- 👤 Owner Detection
+- 📅 Deadline Identification
+- 💡 Key Decision Extraction
+- ❓ Open Questions & Follow-ups
+- 💬 Chat with meeting using RAG
 - 🔍 Semantic Search with ChromaDB
-- 📄 Export reports as PDF or TXT
+- 📄 Export reports as PDF/TXT
+- ⚡ Interactive Streamlit Interface
 
 ---
 
-# 🏗️ Architecture
+# 🖼️ Screenshots
+
+## 🏠 Home Page
+
+Upload a YouTube URL or audio/video file to start analyzing your meeting.
+
+![Home](assets/home.png)
+
+---
+
+## 📝 AI Meeting Summary
+
+Automatically generated meeting summary with action items, key decisions, and follow-ups.
+
+![Summary](assets/summary.png)
+
+---
+
+## 💬 Chat with Your Meeting
+
+Ask natural language questions and retrieve answers using Retrieval-Augmented Generation (RAG).
+
+![Chat](assets/chat.png)
+
+---
+
+# 🏗️ System Architecture
 
 ```text
                 Video / Audio / YouTube URL
@@ -60,12 +115,12 @@ Built using modern Generative AI technologies including Whisper, Sarvam AI, Lang
 # 🛠️ Tech Stack
 
 | Category | Technology |
-|----------|------------|
-| Language | Python |
-| UI | Streamlit |
+|-----------|------------|
+| Programming Language | Python |
+| UI Framework | Streamlit |
 | LLM | Mistral AI |
-| English Transcription | OpenAI Whisper |
-| Hindi/Hinglish | Sarvam AI |
+| English Speech-to-Text | OpenAI Whisper |
+| Hindi/Hinglish STT | Sarvam AI |
 | Framework | LangChain LCEL |
 | Vector Database | ChromaDB |
 | Embeddings | HuggingFace |
@@ -75,22 +130,20 @@ Built using modern Generative AI technologies including Whisper, Sarvam AI, Lang
 
 # 📂 Project Structure
 
-```
-AI-Video-Assistant/
+```text
+AI-Video-Assistant
 │
 ├── core/
-│   ├── transcription.py
-│   ├── summarizer.py
-│   ├── rag.py
-│   └── ...
 │
 ├── utils/
+│
+├── assets/
 │
 ├── app.py
 ├── main.py
 ├── requirements.txt
-├── .gitignore
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -109,21 +162,21 @@ Move into the project
 cd AI-Video-Assistant
 ```
 
-Create virtual environment
+Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate virtual environment
+Activate it
 
-Windows
+### Windows
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Mac/Linux
+### macOS / Linux
 
 ```bash
 source .venv/bin/activate
@@ -149,7 +202,7 @@ SARVAM_API_KEY=your_api_key
 
 ---
 
-# ▶️ Run Application
+# ▶️ Run the Application
 
 ```bash
 streamlit run app.py
@@ -157,32 +210,59 @@ streamlit run app.py
 
 ---
 
-# 💬 Chat with your Meeting
+# 💬 Example Questions
 
-After transcription:
+Once transcription is complete, you can ask:
 
-- Ask questions about the meeting
-- Retrieve discussion context
-- Generate intelligent answers using RAG
-
-Example:
-
-> What decisions were made?
-
-> What are the pending action items?
-
-> Who owns Task 2?
+- What decisions were made?
+- What are the pending action items?
+- Who is responsible for each task?
+- What deadlines were discussed?
+- Summarize the meeting in five bullet points.
 
 ---
 
-# 📄 Export Options
+# 📄 Export Reports
 
-Generate reports as:
+The generated meeting report can be exported as:
 
-- PDF
-- TXT
+- 📄 PDF
+- 📝 TXT
 
 ---
 
+# 🚀 Future Improvements
 
+- Speaker Diarization
+- Live Meeting Support
+- Zoom Integration
+- Microsoft Teams Integration
+- Google Meet Integration
+- Multi-language Translation
+- Email Summary Generation
+- Meeting Analytics Dashboard
 
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+If you'd like to improve this project:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+# 👨‍💻 Author
+
+**Rohan Baviskar**
+
+GitHub: https://github.com/rohanbaviskarr
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
