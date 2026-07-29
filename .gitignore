@@ -1,1 +1,23 @@
+# Environment
 .env
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Vector DB
+vector_db/
+
+# Generated Reports
+reports/
+
+# Downloads
+downloads/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
